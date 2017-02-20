@@ -1,0 +1,220 @@
+/* 
+Project Name: Blank Template
+Client: Your Client
+Author: Your Name
+Developer @GA in NYC
+*/
+
+
+/******************************************
+/* SETUP                   
+/*******************************************/
+
+
+/* Box Model Hack */
+
+* {
+    -moz-box-sizing: border-box;
+    /* Firexfox */
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome/iOS/Android */
+    box-sizing: border-box;
+    /* IE */
+}
+
+
+/* Clear fix hack */
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+.alignright {
+    float: right;
+    padding: 0 0 10px 10px;
+    /* note the padding around a right floated image */
+}
+
+.alignleft {
+    float: left;
+    padding: 0 10px 10px 0;
+    /* note the padding around a left floated image */
+}
+
+
+/******************************************
+/* BASE STYLES                   
+/*******************************************/
+
+body {
+    color: #000;
+    font-size: 12px;
+    line-height: 1.4;
+    font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+    display: block;
+}
+
+
+/******************************************
+/* LAYOUT                   
+/*******************************************/
+
+header {
+    float: left;
+    position: absolute;
+    margin: 0px 100px 10px 30px;
+    margin-right: 20%;
+    z-index: 1;
+}
+
+@media only screen and (max-width: 500px) {
+    header {
+        width: 100%;
+        text-align: center;
+        display: inline-block;
+        margin: auto;
+    }
+}
+
+em {
+    font-family: serif;
+    font-size: 3em;
+    font-style: italic;
+    line-height: 100px;
+}
+
+em a:hover {
+    opacity: 1;
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    unicode-bidi: bidi-override;
+    direction: rtl;
+}
+
+nav {
+    font-size: 2em;
+}
+
+nav ul li a {
+    opacity: .6;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+nav ul li:first-child a:hover {
+    opacity: 1;
+    background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2), color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22));
+    background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2), color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22));
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-style: italic;
+}
+
+nav ul li:nth-child(2) a:hover {
+    animation: blur 20s ease-in;
+    -webkit-animation: blur 22s ease-in;
+    opacity: 1;
+    font-style: italic;
+}
+
+@keyframes blur {
+    0% {
+        text-shadow: 0 0 100px #fff;
+        opacity: 0;
+    }
+    5% {
+        text-shadow: 0 0 90px #fff;
+    }
+    15% {
+        opacity: 1;
+    }
+    20% {
+        text-shadow: 0 0 0px #fff;
+    }
+    80% {
+        text-shadow: 0 0 0px #fff;
+    }
+    85% {
+        opacity: 1;
+    }
+    95% {
+        text-shadow: 0 0 90px #fff;
+    }
+    100% {
+        text-shadow: 0 0 100px #fff;
+        opacity: 0;
+    }
+}
+
+nav ul li:nth-child(3) a:hover {
+    opacity: 0.9;
+    color: red;
+    background-color: black;
+    font-style: italic;
+}
+
+nav ul li:nth-child(4) a:hover {
+    opacity: 1;
+    background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #87CEEB), color-stop(0.15, #87CEEB), color-stop(0.3, #87CEEB), color-stop(0.45, #87CEEB), color-stop(0.47, #87CEEB), color-stop(0.8, #9ACD32), color-stop(0.9, #9ACD32), color-stop(1, #9ACD32));
+    background-image: gradient( linear, left top, right top, color-stop(0, #87CEEB), color-stop(0.15, #87CEEB), color-stop(0.3, #87CEEB), color-stop(0.45, #87CEEB), color-stop(0.48, #87CEEB), color-stop(0.8, #9ACD32), color-stop(0.9, #9ACD32), color-stop(1, #9ACD32));
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-style: italic;
+}
+
+nav ul li:nth-child(5) a:hover {
+    opacity: 0.9;
+    font-style: italic;
+    text-decoration: line-through;
+    background-color: yellow;
+}
+
+nav ul li:nth-child(6) a:hover {
+    opacity: .8;
+    color: black;
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    font-style: italic;
+}
+
+div {
+    display: block;
+    z-index: 2
+}
+
+#content {
+    float: right;
+    width: 65%;
+    margin-top: 5%;
+    margin-bottom: 0%;
+    margin-left: 400px;
+}
+
+#nav {
+    text-align: center;
+    display: block;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+#nav ul {
+    list-style-type: none;
+}
+
+#nav a:hover {
+    font-style: italic;
+}
