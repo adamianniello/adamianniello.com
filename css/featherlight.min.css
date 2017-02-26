@@ -53,8 +53,8 @@
         position: absolute;
         float: right;
         z-index: 9999;
-        top: 10px;
-        right: 10px;
+        top: -3px;
+        right: -3px;
         line-height: 35px;
         width: 35px;
         cursor: pointer;
@@ -63,11 +63,14 @@
         background: none;
         color: white;
         border: 0;
-        padding: 0
+        padding: 0;
+        -webkit-tap-highlight-color: none;
+        
     }
     .featherlight .featherlight-close-icon::-moz-focus-inner {
         border: 0;
         padding: 0
+         -webkit-tap-highlight-color: none;
     }
     .featherlight .featherlight-image {
         width: 100%
