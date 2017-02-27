@@ -224,3 +224,48 @@ div.fotorama{
     padding-left:1%; 
     padding-top:3%;
     padding-bottom:1%;}
+
+p.fotorama-caption{
+    text-align: center;
+    margin-right: auto;
+    font-size:1.1em;
+    font-family: helvetica;
+    font-weight: 400;
+}
+
+div.info{
+    text-align: center;
+    margin-right: auto;
+   
+    padding-top: 1%;
+
+
+}
+a.infolink{
+    font-size:1.1em;
+    cursor: pointer;
+    font-style: italic;
+    
+
+
+}
+
+a.infolink:hover{
+    text-decoration: underline;
+
+
+}
+
+.fotorama__caption__wrap p {
+    margin: 0 0 .25em;
+}
+
+p.infotext{
+    max-width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: none;
+    font-size: 1.1em;
+    padding-bottom: 2%;
+}

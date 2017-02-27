@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="description" content="Your description goes here">
     <meta name="keywords" content="one, two, three">
-    <title>Blank Template</title>
+    <title>Holy Land</title>
     <!-- external CSS link -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
@@ -18,25 +18,60 @@
 data-transition="slide"
 data-clicktransition="dissolve"
 data-width="100%"
-data-ratio="50/25"
+data-ratio="55/25"
 data-loop="true"
 data-nav="false"
 data-keyboard="true"
+data-trackpad:"true"
+data-swipe"true" 
+data-captions="false" 
+data-auto="false"
 >
-  <img src="i/777/1.jpg">
-  <img src="i/777/2.jpg">
-  <img src="i/777/3.jpg">
-  <img src="i/777/4.jpg">
-  <img src="i/777/5.jpg">
-  <img src="i/777/6.jpg">
+  <img src="i/777/1.jpg" data-caption="11020101" data-adaptive-background>
+  <img src="i/777/2.jpg" data-caption="200405.60">
+  <img src="i/777/3.jpg" data-caption="100303.70">
+  <img src="i/777/4.jpg" data-caption="100203.20">
+  <img src="i/777/5.jpg" data-caption="100203.20">
+  <img src="i/777/6.jpg" data-caption="100203.20">
 </div>
+
+<p class="fotorama-caption"></p>
+
+<div class="info">
+    
+    <a class="infolink">Info</a>
+    <p class="infotext">orem ipsum dolor sit amet, consectetur adipiscing elit. Donec convallis ex a pulvinar pretium. Pellentesque euismod laoreet nisl et congue. Maecenas ac luctus leo. Integer eget vestibulum justo. Maecenas sit amet eros vitae nisi ultrices maximus vitae eget massa. Aenean pulvinar enim quis fermentum mattis. Vestibulum sit amet felis faucibus, pharetra erat eu, vehicula mi. Integer cursus, purus quis maximus suscipit, orci lacus egestas purus, ut finibus ipsum massa ac nisi. Suspendisse eleifend justo nec purus luctus, facilisis sodales purus elementum. Vestibulum sed velit vulputate, faucibus dui at, blandit lacus.</p>
+</div>
+
+
     
      <!-- <img id="image"/> -->
 
     <!-- javascript -->
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="js/fotorama.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/jquery.adaptive-backgrounds.js"></script>
+    
+    <script>
+    $(document).ready(function(){
+  
+$('.fotorama')
+    .on('fotorama:show', function (e, fotorama) {    
+        fotorama.$caption = fotorama.$caption || $(this).next('.fotorama-caption');
+        fotorama.$caption.text(fotorama.activeFrame.caption);
+    })
+    .fotorama();
+
+        $("a.infolink").click(function(){
+        $("p.infotext").toggle(10);
+    });
+      $.adaptiveBackground.run();
+
+});
+</script>
+
+
+
 
 </body>
 
